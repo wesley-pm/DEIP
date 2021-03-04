@@ -52,6 +52,56 @@
       <input type="text" required class="form-control" name="customer['birthdate']">
     </div>
   </div>
+
+
+    <div class="row">
+      <div class="form-group col-sm-4">
+        <label for="state">Escolaridade</label>
+        <select name="state" id="state" class="form-control">
+        <option value="" disabled selected>Selecione...</option>
+        <option>Ensino Médio</option>
+        <option>Técnico</option>
+        <option>Graduação</option>
+        <option>Pós-graduação</option>
+        <option>Mestrado</option>
+        <option>Doutorado</option>
+      </select>
+     </div>
+
+     <div class="form-group col-sm-4">
+        <label for="state">Formação e Aperfeiçoamento</label>
+        <select name="state" id="state" class="form-control">
+        <option value="" disabled selected>Selecione...</option>
+        <option>CFSD</option>
+        <option>CFC</option>
+        <option>CFS</option>
+        <option>CAS</option>
+        <option>CHO</option>
+        <option>CFO</option>
+        <option>CAO</option>
+        <option>CSP</option>
+      </select>
+     </div>
+
+     <div class="form-group col-sm-4">
+        <label for="state">Instrução e Treinamento</label>
+        <select name="state" id="state" class="form-control">
+        <option value="" disabled selected>Selecione...</option>
+        <option>Agente de Trânsito</option>
+        <option>Ambiental</option>
+        <option>CATE</option>
+        <option>CHOQUE</option>
+        <option>COESP</option>
+        <option>COF</option>
+        <option>GIRO</option>
+        <option>Inteligência</option>
+        <option>K9</option>
+        <option>MOTAMO</option>
+        <option>PATAMO</option>
+        <option>RISC</option>
+      </select>
+     </div>
+    </div>  
   
   <div id="actions" class="row">
     <div class="col-md-12">

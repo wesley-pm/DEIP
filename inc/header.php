@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/bootstrap.min.css">
     <link rel="shortcut icon" href="<?php echo BASEURL; ?>assets/imagens/brasao.ico" type="image/x-icon">
+    <script defer src="<?php echo BASEURL; ?>js/all.min.js"></script>
 
     <style>
         body {
@@ -31,36 +32,30 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="<?php echo BASEURL; ?>index.php" class="navbar-brand">DEIP</a>
+          <a href="<?php echo BASEURL; ?>index.php" class="navbar-brand"> DEIP</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">          
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    Militares <span class="caret"></span>
+                    <i class="fas fa-users"></i> Militares <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo BASEURL; ?>customers/add.php">Cadastrar</a></li>
                     <li><a href="<?php echo BASEURL; ?>customers/indexs.php">Gerenciar</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    Cursos <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Civis</a></li>
-                    <li><a href="#">Militares</a></li>
-                </ul>
+            <li class="nav-item">
+                <a href="<?php echo BASEURL; ?>customers/cursos.php"><i class="fas fa-book"></i> Cursos</a>
             </li>
             <li class="nav-item">
-                <a href="<?php echo BASEURL; ?>customers/listar_estatistica.php">Estatística</a>
+                <a href="<?php echo BASEURL; ?>customers/listar_estatistica.php"><i class="fas fa-chart-line"></i> Estatística</a>
             </li>
             <li class="nav-item">
-                <a href="#">Sobre</a>
+                <a href="#"><i class="fas fa-exclamation-circle"></i> Sobre</a>
             </li>
             <li class="nav-item">
-                <a href="<?php echo BASEURL; ?>customers/login.php">Sair</a>
+                <a href="<?php echo BASEURL; ?>customers/login.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
             </li>
           </ul>
         </div><!--/.navbar-collapse -->

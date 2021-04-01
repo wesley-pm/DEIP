@@ -112,8 +112,8 @@ add();
 				echo"</tbody>
 				     </table>";
 
-				//Paginação - Somar a quantidade de usuários
-				$result_pg = "SELECT count(id) AS num_result FROM customers";
+					 //Paginação - Somar a quantidade de usuários
+				$result_pg = "SELECT COUNT(id) AS num_result FROM customers";
 				$resultado_pg = mysqli_query ($conn, $result_pg);
 				$row_pg = mysqli_fetch_assoc ($resultado_pg);
 
@@ -122,28 +122,37 @@ add();
 
                 //Limitar os links antes e depois
 				$max_links = 2;
-				echo "<a href='cursos.php?pagina=1'> Primeira </a>";
+				echo "<nav aria-label='paginacao-blog'>";
+                echo "<ul class='pagination justify-content-center'>";
+                echo "<li class='page-item'>";
+				echo "<a class='page-link' href='cursos.php?pagina=1' tabindex='-1'>Primeira</a>";
+                echo "</li>";
 
 				for ($pag_ant= $pagina - $max_links; $pag_ant <= $pagina  - 1; $pag_ant++) { 
 					if ($pag_ant >= 1){
-						echo "<a href='cursos.php?pagina=$pag_ant'> $pag_ant</a>";
+						echo "<li class='page-item'><a class='page-link' href='cursos.php?pagina=$pag_ant'>$pag_ant</a></li>";
 					}
 
 				}
 
-				echo "$pagina";
+				echo "<li class='page-item active'>";
+				echo "<a class='page-link' href='#'>$pagina <span class='sr-only'></span></a>";
+				echo "</li>";
 
 				for ($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_links; $pag_dep ++){
 					if ($pag_dep <= $quantidade_pg){
-						echo "<a href='cursos.php?pagina=$pag_dep '> $pag_dep </a>";
+						echo "<li class='page-item'><a class='page-link' href='cursos.php?pagina=$pag_dep'>$pag_dep</a></li>";
 					}
 
 				}
-
-				echo "<a href='cursos.php?pagina=$quantidade_pg'> Última </a>";
+		
+				echo "<li class='page-item'>";
+				echo "<a class='page-link' href='cursos.php?pagina=$quantidade_pg'> Última </a>";
+				echo "</li>";
 
 
 			}
+
 			?>
 
 		</div>
